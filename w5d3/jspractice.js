@@ -51,3 +51,43 @@ function sumOfNPrimes (n) {
   }
   return sum;
 }
+
+
+function titleize(names, callback) {
+  let titleized = names.map( name => `Mx. ${name} Jingleheimer Schmidt`);
+  callback(titleized);
+}
+
+titleize(["Mary", "Brian", "Leo"], (names) => {
+  names. forEach (name => console.log(name));
+});
+
+
+function Elephant(name, height, tricks) {
+  this.name = name;
+  this.height = height;
+  this.tricks = tricks;
+}
+
+Elephant.protoype.trumpet = function() {
+  console.log(`${this.name} the elephant is happy`);
+};
+
+Elephant.protoype.grows = function() {
+  console.log(`The elephant is ${this.height} height`);
+};
+
+Elephant.protoype.trick = function() {
+  console.log(`The elephants favorite trick is ${this.trick}`);
+};
+
+
+function dinerBreakfast() {
+  let order = "I'd like a breakfast burrito please";
+  order = console.log(order);
+
+  return function (food) {
+    order = `${order.slice(0, order.length - 8)} and ${food} please.`;
+    console.log(order);
+  };
+}
